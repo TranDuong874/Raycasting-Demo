@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1678356477 source:d:\game project\demo\game.cpp
+	"game.h"
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	"player.h"
+	"map.h"
+	<iostream>
+
+1678335175 d:\game project\demo\game.h
+	<SDL.h>
+
+1678361486 d:\game project\demo\player.h
+	"game.h"
+	<math.h>
+	"map.h"
+
+1678354523 d:\game project\demo\map.h
+	<SDL.h>
+	<SDL_image.h>
+	<bits/stdc++.h>
+
+1678288370 source:d:\game project\demo\main.cpp
+	<bits/stdc++.h>
+	<SDL.h>
+	"game.h"
+
+1678353031 source:d:\game project\demo\map.cpp
+	<SDL.h>
+	<SDL_image.h>
+	<bits/stdc++.h>
+	"game.h"
+	"map.h"
+
+1678287332 source:d:\game project\demo\player.cpp
+
