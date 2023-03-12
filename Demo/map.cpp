@@ -16,27 +16,32 @@ Map::Map(int Map_Width, int Map_Height/*number of blocs*/, int tileSize)
 
         mapReader.open("test.txt");
 
-        Map_TileTexture = Map_LoadTexture("tileSet.png");
+        Map_TileTexture = Map_LoadTexture("tileSet.bmp");
         //Load tiles into a vector
+        Map_TileSet = new SDL_Rect[3];
+        Map_Tilemap = new int[Map_Size];
+        Map_DstTile = new SDL_Rect[Map_Width*Map_Height];
+
         for(int i = 0; i < 3; i++)
         {
             SDL_Rect tmp = {i*32,0,32,32};
-            Map_TileSet.push_back(tmp);
+            Map_TileSet[i] = tmp;
         }
 
         for(int i = 0; i < Map_Size; i++)
         {
             int pos;
-            mapReader >> pos;
-            Map_Tilemap.push_back(pos);
+            mapReader >> Map_Tilemap[i];
         }
 
+        int k = 0;
         for(int i = 0; i < Map_Height; i++)
         {
             for(int j = 0; j < Map_Width; j++)
             {
                 SDL_Rect tmp = {tileSize*j,tileSize*i,tileSize,tileSize};
-                Map_DstTile.push_back(tmp);
+                Map_DstTile[k]= tmp;
+                k++;
             }
         }
     }

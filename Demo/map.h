@@ -14,10 +14,10 @@ struct Map
     int Map_Width, Map_Height;
     int Map_Size;
 
-    vector<int> Map_Tilemap;
-    vector<SDL_Rect> Map_DstTile;
+    int* Map_Tilemap;
+    SDL_Rect* Map_DstTile;
 
-    vector<SDL_Rect> Map_TileSet;
+    SDL_Rect* Map_TileSet;
     SDL_Texture* Map_TileTexture;
     SDL_Rect Map_SrcTile;
     int tileSize;

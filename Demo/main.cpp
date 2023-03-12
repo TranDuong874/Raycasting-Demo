@@ -8,7 +8,7 @@ using namespace std;
 int main(int arg, char* argv[])
 {
     game* g = new game();
-    g->init("Love castle", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800,600);
+    g->init("Raycaster", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1024,512);
 
     while(g->running)
     {

@@ -3,8 +3,9 @@
 #include <SDL_image.h>
 #include <SDL_mixer.h>
 #include "player.h"
-#include "map.h"
+
 #include <iostream>
+
 using namespace std;
 
 
@@ -28,7 +29,7 @@ void game::init(const char* title, int posx, int posy, int screen_width, int scr
     }
 
     square = new player(100,100);
-    mp = new Map(16,16,32);
+    mp = new Map(16,16,64);
 
 }
 
@@ -56,13 +57,16 @@ void game::update()
 void game::render()
 {
     SDL_RenderClear(renderer);
-    mp->Map_Render(renderer);
-    square->drawRays(mp);
-    square->render();
 
+    mp->Map_Render(renderer);
+
+    square->render();
+    square->castRay(mp);
     SDL_RenderPresent(renderer);
+
     SDL_SetRenderDrawColor(renderer, 255,255,255,255);
 }
+
 
 
 void game::exitSDL()
