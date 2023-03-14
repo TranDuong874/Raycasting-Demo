@@ -29,7 +29,7 @@ void game::init(const char* title, int posx, int posy, int screen_width, int scr
     }
 
     square = new player(100,100);
-    mp = new Map(16,16,64);
+    mp = new Map(16,16,32);
 
 }
 

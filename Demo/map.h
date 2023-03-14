@@ -32,8 +32,6 @@ struct Map
     SDL_Texture* Map_LoadTexture(string path);
 
     ~Map(){};
-
-
 };
 
 #endif // map_h
